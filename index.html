@@ -96,26 +96,26 @@
       background-color: #0056b3;
     }
 
-    /* Topボタン：最初は非表示にしておき、スクロールで表示 */
-    .top-button {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      z-index: 9999;
-      display: none; /* 最初は非表示 */
-    }
-    .top-button:hover {
-      background: #0056b3;
-    }
+	/* 11/4 Top/Bottomボタン */
+	.bottom-button, .top-button {
+	    position: fixed;
+	    bottom: 20px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    background: #007bff;
+	    color: white;
+	    border: none;
+	    border-radius: 20px;
+	    padding: 10px 20px;
+	    font-size: 16px;
+	    cursor: pointer;
+	    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	    z-index: 9999;
+	    display: none;
+	}
+	.bottom-button:hover, .top-button:hover {
+	    background: #0056b3;
+	}
 
     @media (max-width: 480px) {
       .container {
