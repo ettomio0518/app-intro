@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>音声カレンダー紹介</title>
+  <title>舞いカレンダー紹介</title>
   <style>
     body {
       font-family: "Segoe UI", "Helvetica Neue", sans-serif;
@@ -53,19 +53,25 @@
       margin-top: 10px;
       border-radius: 5px;
     }
-    .btn {
-      display: inline-block;
-      background: #4b0082;
-      color: white;
-      padding: 10px 16px;
-      margin: 4px 0;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 1em;
-    }
-    .btn:hover {
-      background: #360066;
-    }
+	.btn {
+	  display: block;
+	  width: 85%;
+	  margin: 6px auto;
+	  padding: 12px 16px;
+
+	  background: #4b0082;
+	  color: white;
+	  text-decoration: none;
+	  border-radius: 6px;
+
+	  font-size: 1em;
+	  line-height: 1.4;
+	  text-align: center;
+
+	  white-space: normal;   /* ← nowrap をやめる */
+	  word-break: keep-all;
+	}
+
     img {
       width: 100%;
       height: auto;
@@ -79,22 +85,23 @@
       color: #666;
     }
 
-    /* 戻るボタン（右上）を統一デザインに変更 */
-    .top-right-button {
-      position: absolute;
-      top: 2px;
-      right: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      padding: 6px 12px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-    .top-right-button:hover {
-      background-color: #0056b3;
-    }
+	    /* 戻るボタン（右上）を統一デザインに変更 5/5 */
+	    .top-right-button {
+  		  /* position: static;   /* ← absolute をやめる */
+  		  position: fixed;
+	      top: 8px;
+	      right: 10px;
+	      background-color: #ccffff;
+	      color: black;
+	      border-radius: 20px;
+	      padding: 6px 12px;
+	      font-size: 14px;
+    	  border: 1px solid black; /* 枠線を表示 */	      
+	      cursor: pointer;
+	    }
+	    .top-right-button:hover {
+	      background-color: #f4f4f4;
+	    }
 
 	/* 11/4 Top/Bottomボタン */
 	.bottom-button, .top-button {
@@ -117,31 +124,121 @@
 	    background: #0056b3;
 	}
 
-    @media (max-width: 480px) {
-      .container {
-        padding: 15px;
-      }
-      .btn {
-        width: 60%;
-        text-align: center;
-      }
-    }
+.note-button {
+  display: block;
+  width: 85%;
+  margin: 6px auto;
+  padding: 12px 16px;
+
+  background: #8a8aff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+
+  font-size: 1em;
+  line-height: 1.4;
+  text-align: center;
+
+  white-space: normal;   /* ← nowrap をやめる */
+  word-break: keep-all;
+}
+
+.note-button:hover {
+  background-color: #6666ff; /* ホバー時に少し濃く */
+}
+
+.note-entry {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  .btn,
+  .note-button {
+    width: 60%;
+    text-align: center;
+  }
+}
+        
   </style>
 </head>
 <body>
 
   <header>
+    <button class="top-right-button" onclick="location.href='index.html'">戻る</button>
     <h1>舞いカレンダー 紹介ページ</h1>
   </header>
 
   <div class="container">
     <div class="section">
       <img src="紹介580.png" alt="サンプル画像">
-      <p><strong>マイカレンダーと読みます。</strong>従来の「音声カレンダー」の機能に加えて、簡易的にGoogleカレンダーに進めるようにしました。これによりハイブリッド型カレンダーアプリに生まれ変わりました。</p>
+      
 
+</div>
+      
+      <p><strong>「舞いカレンダー」は「マイカレンダー」と読みます。</strong>従来の「音声カレンダー」の機能に加えて、Googleカレンダーへも簡単にアクセスできるようにしました。これにより、ハイブリッド型カレンダーアプリに生まれ変わりました。
+<br><span style="color: blue;">さらに、強力なツール<strong>「今日のカード」</strong>を搭載しました。
+      <br>2026年4月には、トップページ、今日のカード、度量衡コンバーター、お買い物電卓に<strong><span style="color: #800040;">AI機能</span></strong>を組み込みました。</span>
+トップページでは、AIの協力を得て予定を入力することもできます。また、トップページをはじめ、各ページでAIとの会話をお楽しみいただけます。
+
+      </p>
+
+<div style="text-align: left; ">
+
+  <p style="font-size: 16px; line-height: 1.8; margin-bottom: 14px;">
+  	*******************************************<br>
+    「舞いカレンダー」は多機能です。<br>
+    今回、搭載している機能を一覧にまとめた<br>
+    <strong>「総合案内ページ」</strong>を開設しました。<br>
+    それぞれの機能について、紹介記事や動画も掲載しています。<br>
+    ぜひご覧ください。
+  </p>
+
+  <a href="https://note.com/ettomio0518/n/nccff6e24cd45?sub_rt=share_pb"
+     style="
+       display: inline-block;
+       padding: 13px 28px;
+       background-color: #e4f3e5;
+       color: #176b35;
+       border: 2px solid #3a9855;
+       border-radius: 12px;
+       text-decoration: none;
+       font-size: 16px;
+       font-weight: bold;
+       box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+     ">
+    📖 総合案内ページへ進む
+  </a><br>
+  	*******************************************<br>
+  
       <p><strong>音声で予定をお知らせ！</strong><br>シンプル操作で使える多機能カレンダーアプリです。</p>
+      
+      <p><span style="color: blue;">● 初期設定の手間を解消（マイク権限、位置情報の自動要求）
+アプリ初回起動時に、マイク権限に続いて位置情報の利用許可を自動で案内する仕組みを導入しました。これにより、設定画面から手動で設定する手間がなくなり、現在地の天気予報や各種機能をすぐにご利用いただけます。<br><br>
+
+◎ 起動時は簡易版の画面になっています。現在は料金は発生しませんので、一番下から<strong>正規版を選択</strong>してください。</span>
+	</p>
     </div>
 
+<div>
+	📅 <strong>日付タップの予定出力と予定入力の切り替え</strong>
+	<ul>
+	<li>これまでの予定入力はモーダルのカレンダーを表示させて、その日付タップで入力していましたが、少々面倒な点がありました。例えば連続して次月の予定入力の場合など。
+そこで、自身のカレンダーから直接日付をタップして予定の入力ができるようにしました。<span style="color: blue;"><br>これにより、日付タップの動作を「予定の出力」と「予定の入力」に切り替えてご利用いただけます。</span></li>
+
+	</ul>
+	</div>
+	
+	<div>
+	📅 <strong>Version 27.7 リリースノート</strong>
+	<ul>
+	<li>新機能「重要」ハイライトの実装: <span style="color: red;"><strong>予定の登録内容に「重要」の文字を含めることで</strong></span>、<strong>カレンダーの日付セルの下半分に薄い赤色（ピンク色）のアクセント</strong>が自動で入るようになりました。
+	<li>一般利用での実用性向上: 自分自身のスケジュール管理はもちろんのこと、一般の方の日常使いとしても、大切な予定を目立たせて一目で把握できる重宝する機能に仕上がっています。</li>
+	</ul>
+	</div>
+	
     <div class="section">
       <h2>📱 簡易版の主な機能</h2>
       <ul>
@@ -154,6 +251,55 @@
 
 	<div class="section">
 	    <h2>🌟 プレミアム版の拡張機能</h2>
+
+		<h3 style="margin-top: 30px; border-bottom: 2px solid #ff9999; padding-bottom: 5px;">
+		🆕 「今日のカード」機能 強化！
+		</h3>
+
+		<p>
+		<strong>予定・天気・メモ・日記を「今日」1ページに集約。</strong><br>
+		その日に必要な情報を、迷わず・静かに確認できる最強ツールです。
+		</p>
+
+		<ul style="margin-top: 15px;">
+		  <li>
+		    ⏰ <strong>時間ブロックをタップ</strong><br>
+		    予定内容を <strong>アラート＋音声</strong> でお知らせ。<br>
+		    視覚と聴覚の両方で確認でき、スマホでも直感的に操作できます。
+		  </li>
+
+		  <li style="margin-top: 10px;">
+		    📣 <strong>直近の予定を自動判定</strong><br>
+		    現在時刻から一番近い予定を検知し、<strong>アラート＋音声通知</strong>。<br>
+		    まるで秘書のように「次」を教えてくれます。
+		  </li>
+
+		  <li style="margin-top: 10px;">
+		    📅 <strong>時間割グラフ表示</strong><br>
+		    一日の流れをひと目で把握。<br>
+		    予定の重なりも回避済みで、安心して使えます。
+		  </li>
+
+		  <li style="margin-top: 10px;">
+		    🌤️ <strong>暦・天候情報をまとめて表示</strong><br>
+		    天気／六曜／星座／和風月名まで統合。<br>
+		    実用性と日本的な楽しさを両立しました。
+		  </li>
+
+		  <li style="margin-top: 10px;">
+		    ✍️ <strong>日記＆走り書きメモを連携</strong><br>
+		    ・走り書き：ひらめき、買い物メモなど自由に記録<br>
+		    ・7日以上前の走り書きは削除可能<br>
+		    ・日記機能も、より使いやすく改善されています
+		  </li>
+		</ul>
+
+		<p style="margin-top: 10px;">
+		📌 <strong>「今日」に必要な情報を、1画面で。</strong><br>
+		考えなくても、開けば分かる。<br>
+		舞いカレンダーが目指す「静かな便利さ」を体現した機能です。
+		</p>
+	    
 	    
 	    <h3 style="margin-top: 20px; border-bottom: 2px solid #ddd; padding-bottom: 5px;">🎙️ 音声入力がさらに進化しました！</h3>
 	    <p>予定入力や高機能検索の音声入力にて、<strong>最大3つまでの変換候補を表示</strong>するようになりました。</p>
@@ -190,6 +336,14 @@
 	        <li>ブックマーク・通常電卓など便利ツールも充実</li>
 	        <li>マスコット「カレミン」をクリックすると主な機能に直接アクセス可能</li>
 	        <li>データの保存と復元機能を搭載</li>
+	        <li><span style="color: blue;">世界の時刻表示</span>を搭載</li>
+	        <li><span style="color: blue;">現在地の天気予報</span>を搭載　ヘッダーの「舞い ♪ カレンダー」クリックで表示</li>
+	        <li><span style="color: blue;"><strong>今日のカード</strong></span>を搭載　ヘッダー下の今日の赤文字の日付(例 2025/12/11)をクリックで表示</li>	  
+			<li><strong>カレンダーで、例 「9時から13時までテスト」と入力すると、それが今日ならば自動的に「今日のカード」の「今日の時間割」に反映されます。</strong></li>
+			<li><span style="color: blue;">「今日の時間割」で表示される時間ブロックをタップで予定内容をアラートと音声出力します。</span></li>
+			<li><span style="color: blue;"><strong>「直近の予定出力」で現時刻に一番近い予定内容をアラートと音声で出力します。</strong></span></li>
+			<li><span style="color: blue;"><strong>「今日の走り書き」で今日の買い物メモなどをアラートと音声で確認できます。</strong></span></li>
+
 	    </ul>
 	</div>
 
@@ -200,10 +354,58 @@
         <li>日本語読み上げに対応</li>
         <li>不要になった予定は削除を推奨（容量節約）</li>
         <li>**削除したくない過去の行事などは残すことにより、日付に色は残ります**</li>
+        <li>天気予報表示のために端末の位置情報を利用します。位置情報は端末内でのみ使用され、外部に送信・共有されることはありません。</li>        
         <li>個人情報の入力はご遠慮ください</li>
       </ul>
     </div>
 
+    <div class="section">
+      <h2>🌸 活用事例7選</h2>
+	<!-- HTML（各記事リンクに使用） -->
+	<div class="note-entry">
+	  <p>🃏 最強ツール「今日のカード」の実力 ‼️<br>
+	  <a href="https://note.com/ettomio0518/n/n65bed897a46c" class="note-button" target="_blank">記事を読む</a></p>
+	</div>
+
+	<div class="note-entry">
+	  <p>✍️「走り書き」、これは使える‼️ ストレスフリーな情報整理の相棒に <br>
+	  <a href="https://note.com/ettomio0518/n/n6a78ac33706e" class="note-button" target="_blank">記事を読む</a></p>
+	</div>
+
+	<div class="note-entry">
+	  <p>🗓️「舞いカレンダー」基本のキ、予定の入力と出力<br>
+	  <a href="https://note.com/ettomio0518/n/n273c60ba6a80" class="note-button" target="_blank">記事を読む</a></p>
+	</div>
+
+	<div class="note-entry">
+	  <p>🧮「お買い物電卓」 使用例 <br>
+	  <a href="https://note.com/ettomio0518/n/nd1f143f56b73" class="note-button" target="_blank">記事を読む</a></p>
+	</div>
+
+	<div class="note-entry">
+	  <p>📚「高機能検索」、2200ケのデータを入れてるけど<br>
+	  <a href="https://note.com/ettomio0518/n/n4cf159500498" class="note-button" target="_blank">記事を読む</a></p>
+	</div>
+
+	<div class="note-entry">
+	  <p>📐 度量衡×電卓を組み合わせると、意外なほど便利<br>
+	  <a href="https://note.com/ettomio0518/n/nde58feee639f" class="note-button" target="_blank">記事を読む</a></p>
+	</div>
+
+	<div class="note-entry">
+	  <p>💾「データの保存と復元ツール」の使い方<br>
+	  <a href="https://note.com/ettomio0518/n/n3b5f204167a8" class="note-button" target="_blank">記事を読む</a></p>
+	</div>
+    </div>
+
+<div>
+	🗑️ <strong><span style="color: red;">アプリ版とWeb版のデータの消去について</span></strong>
+	<ul>
+	<li>アプリ版ではアプリをアンインストールするとスマホ内に保存されているデータは完全に消去されます。</li>
+	<li>Web版では「データの保存と復元ツール」から「keyリスト」→「全keyを消去」でスマホ内のデータは完全消去されます。</li>
+	</ul>
+	</div>
+		      
     <div class="section">
       <h2>📌 その他</h2>
       <ul>
@@ -217,14 +419,14 @@
     <div class="section">
       <h2>📺 プロモーション動画</h2>
       <a class="btn" href="https://www.youtube.com/shorts/BuQaFeQsyPg">簡易版紹介動画</a><br>
-      <a class="btn" href="https://www.youtube.com/shorts/pPWS5uicft4">正規版紹介動画</a><br>
+      <a class="btn" href="https://youtu.be/JAgoDmmMUn8">正規版紹介動画</a><br>
       <a class="btn" href="https://www.youtube.com/shorts/X9R4FjDXs6Q">音声入力・出力・検索機能動画</a><br>
-        <a class="btn" href="https://youtube.com/shorts/PSdBRB5R460">最新版の紹介動画</a>
+        <a class="btn" href="https://youtube.com/shorts/QeUBo5uy608">最新版の紹介動画</a>
     </div>
 
     <div class="section">
       <h2>🌐 案内サイト</h2>
-      <a class="btn" href="https://ettomio.blog.jp/archives/27567409.html">案内サイトへ</a><br>
+      <a class="btn" href="https://note.com/ettomio0518/n/nc64f5506ac74">案内サイトへ</a><br>
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.ettomio.my_calendar_app">Androidアプリ「舞いカレンダー」へ</a><br>
 	<a class="btn" href="https://ettomio0518.github.io/my-calendar-app/index.html">Web版「舞いカレンダー」へ</a>      
     </div>
@@ -253,47 +455,46 @@
 	        document.getElementById("bottomBtn").style.display = "none";
 	    }
 
-	    // ★ スクロールボタン制御 (Top/Bottom) 11/6
-	function showScrollButtonsIfPageLong() {
-	    const topBtn = document.getElementById("topBtn");
-	    const bottomBtn = document.getElementById("bottomBtn");
-	    
-	    // ページが十分に長いかチェック (コンテンツが短い場合はボタン不要)
-	    const scrollThreshold = 300;
-	    const isScrollable = document.body.scrollHeight > window.innerHeight + scrollThreshold; 
+		// ==========================================================
+		// ★ スクロールボタン制御の修正版 (Top/Bottom 独立制御) 12/02
+		// ==========================================================
+		function showScrollButtonsIfPageLong() {
+		    const topBtn = document.getElementById("topBtn");
+		    const bottomBtn = document.getElementById("bottomBtn");
+		    
+		    const docHeight = document.body.scrollHeight;
+		    const viewHeight = window.innerHeight;
+		    const scrollY = window.scrollY;
+		    
+		    const scrollThreshold = 100; // ボタンが表示されるしきい値 (px)
+		    
+		    // ページがスクロール可能でなければ両方非表示
+		    if (docHeight <= viewHeight + scrollThreshold) {
+		        topBtn.style.display = "none";
+		        bottomBtn.style.display = "none";
+		        return;
+		    }
 
-	    if (!isScrollable) {
-	        hideScrollButtons();
-	        return;
-	    }
+		    // --- Topボタンの表示制御 ---
+		    // 100px以上スクロールしたらTopボタンを表示
+		    if (scrollY > scrollThreshold) {
+		        topBtn.style.display = "block";
+		    } else {
+		        topBtn.style.display = "none";
+		    }
 
-	    // ページが長い場合のスクロール位置による制御
-	    const scrollY = window.scrollY;
-	    const docHeight = document.body.scrollHeight;
-	    const viewHeight = window.innerHeight;
-	    const bottomMargin = docHeight - viewHeight - scrollY; // 画面下端からドキュメント下端までの距離
-	    
-	    // スクロール位置の判定
-	    if (scrollY > scrollThreshold) {
-	        // [ケース1] ある程度スクロールした -> Topボタンを表示 (Bottomボタンは非表示)
-	        topBtn.style.display = "block";
-	        bottomBtn.style.display = "none";
-	    } else if (scrollY === 0 && bottomMargin > scrollThreshold) {
-	        // [ケース2 - 修正箇所] ページ最上部（scrollY=0）にいる場合 -> Bottomボタンを非表示
-	        topBtn.style.display = "none";
-	        bottomBtn.style.display = "none"; 
-	    } else if (bottomMargin > scrollThreshold) {
-	        // [ケース3] ページ上部にいるが、底部はまだ遠い -> Bottomボタンを表示
-	        // ただし、このelse ifに到達するのは scrollY > 0 の時のみ (ケース2で弾かれるため)
-	        topBtn.style.display = "none";
-	        bottomBtn.style.display = "block";
-	    } else {
-	        // [ケース4] ページの下端近くにいる
-	        topBtn.style.display = "none";
-	        bottomBtn.style.display = "none";
-	    }
-	}
-	
+			// --- Bottomボタンの表示制御 ---
+			// 100px以上スクロール かつ 下端まで余裕がある場合のみ表示
+			if (
+			    scrollY > scrollThreshold &&
+			    docHeight - viewHeight - scrollY > scrollThreshold
+			) {
+			    bottomBtn.style.display = "block";
+			} else {
+			    bottomBtn.style.display = "none";
+			}
+		}
+
 	    // スクロール時のボタン表示制御
 	    window.addEventListener("scroll", showScrollButtonsIfPageLong);
 	    
@@ -315,7 +516,7 @@
   </script>
   
   <footer>
-    © 20251106 ettomio
+    © 20261112 ettomio
   </footer>
 
 
